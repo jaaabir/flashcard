@@ -2,8 +2,7 @@
 import { AppBar, Container, Grid, Button, Box, Card, Typography, Toolbar, CardActionArea, CardContent } from "@mui/material";
 import { useUser } from "@clerk/nextjs"
 import { useEffect, useState } from "react"
-import { writeBatch } from "firebase/firestore";
-// import { db } from "@/firebase";
+import dynamic from 'next/dynamic'
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
