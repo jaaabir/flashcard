@@ -2,13 +2,11 @@
 import { AppBar, Container, Grid, Button, Box, Card, Typography, Toolbar, CardActionArea, CardContent } from "@mui/material";
 import { useUser } from "@clerk/nextjs"
 import { useEffect, useState } from "react"
-import dynamic from 'next/dynamic'
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { collection, doc, getDocs } from 'firebase/firestore'
+import { db } from '@/firebase'
 
-// Dynamically import Firebase functions
-const { collection, doc, getDocs } = dynamic(() => import('firebase/firestore'), { ssr: false });
-const { db } = dynamic(() => import('@/firebase'), { ssr: false });
 
 export default function Flashcard() {
 
